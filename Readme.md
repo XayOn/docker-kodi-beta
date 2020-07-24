@@ -1,8 +1,8 @@
-[![](https://raw.githubusercontent.com/XayOn/docker-kodi-beta/master/kodilovesdocker.png)](https://hub.docker.com/r/xayon/docker-kodi-beta) 
+<span style="display:block;text-align:center">[![](https://raw.githubusercontent.com/XayOn/docker-kodi-beta/master/kodilovesdocker.png)](https://hub.docker.com/r/xayon/docker-kodi-beta) </span>
 
 <center><h1> Dockerized KODI matrix (v19) </h1> </center>
 
-![](https://github.com/XayOn/docker-kodi-beta/workflows/Publish%20to%20Docker/badge.svg) ![](https://img.shields.io/docker/pulls/xayon/docker-kodi-beta)
+<span style="display:block;text-align:center">![](https://github.com/XayOn/docker-kodi-beta/workflows/Publish%20to%20Docker/badge.svg) ![](https://img.shields.io/docker/pulls/xayon/docker-kodi-beta)</span>
 
 
 Use Kodi matrix without any sweat. :sweat_drops: Made with :heartpulse: by David Francos.
