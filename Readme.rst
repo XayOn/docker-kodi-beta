@@ -1,7 +1,7 @@
 Dockerized KODI matrix (v19)
 ----------------------------
 
-:sweat_drops: Test Kodi matrix without any sweat. Made with :heartpulse: by David Francos.
+ :sweat_drops: Test Kodi matrix without any sweat. Made with :heartpulse: by David Francos.
 
 Launch the bleeding edge (unstable) latest kodi releases directly from kodi
 master branch.
