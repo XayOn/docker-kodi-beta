@@ -3,6 +3,9 @@ Dockerized KODI matrix (v19)
 
 .. figure:: https://github.com/XayOn/docker-kodi-beta/workflows/Publish%20to%20Docker/badge.svg
    :alt: Publish to Docker
+|
+.. image:: https://img.shields.io/docker/pulls/xayon/docker-kodi-beta?style=for-the-badge
+   :alt: Docker Pulls
 
 Test Kodi matrix without any sweat. :sweat_drops: Made with :heartpulse: by David Francos.
 
