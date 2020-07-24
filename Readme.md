@@ -27,7 +27,7 @@ system with linux and bash.
 > :warning: ** ARM is not supported **
 
 First install **x11docker** following its installation [guide][3].
-Then, launch **xayon/docker-kodi-beta** with x11docker.
+Then, launch **xayon/docker-kodi-beta** with x11docker
 
 
 ## Why
