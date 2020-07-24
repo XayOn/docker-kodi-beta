@@ -1,7 +1,10 @@
 Dockerized KODI matrix (v19)
 ----------------------------
 
- :sweat_drops: Test Kodi matrix without any sweat. Made with :heartpulse: by David Francos.
+.. figure:: https://github.com/XayOn/docker-kodi-beta/workflows/Publish%20to%20Docker/badge.svg
+   :alt: Publish to Docker
+
+Test Kodi matrix without any sweat. :sweat_drops: Made with :heartpulse: by David Francos.
 
 Launch the bleeding edge (unstable) latest kodi releases directly from kodi
 master branch.
