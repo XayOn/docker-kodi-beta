@@ -1,7 +1,4 @@
-<center>[![](https://raw.githubusercontent.com/XayOn/docker-kodi-beta/master/kodilovesdocker.png)](https://hub.docker.com/r/xayon/docker-kodi-beta) <h1> Dockerized KODI matrix (v19) </h1> 
-![](https://github.com/XayOn/docker-kodi-beta/workflows/Publish%20to%20Docker/badge.svg) ![](https://img.shields.io/docker/pulls/xayon/docker-kodi-beta)
-
-</center>
+<center><a href="https://hub.docker.com/r/xayon/docker-kodi-beta"><img src="https://raw.githubusercontent.com/XayOn/docker-kodi-beta/master/kodilovesdocker.png" alt=""></a> <h1> Dockerized KODI matrix (v19) </h1><br><img src="https://github.com/XayOn/docker-kodi-beta/workflows/Publish%20to%20Docker/badge.svg" alt=""> <img src="https://img.shields.io/docker/pulls/xayon/docker-kodi-beta" alt=""><br><br></center>
 
 Use Kodi matrix without any sweat. :sweat_drops: Made with :heartpulse: by David Francos.
 Dockerized kodi master branch, fresh and nice!
@@ -27,7 +24,13 @@ system with linux and bash.
 > :warning: ** ARM is not supported **
 
 First install **x11docker** following its installation [guide][3].
-Then, launch **xayon/docker-kodi-beta** with x11docker
+Then, launch **xayon/docker-kodi-beta** with x11docker, the full extent of x11docker options is not to be part of this guide, you can refer to its documentation if you need advanced options.
+
+For Xorg, with pulseaudio, you could launch it with the following command:
+
+```bash
+x11docker --xorg --pulseaudio --gpu --homedir $HOME/.kodi_matrix/ kodi_matrix
+```
 
 
 ## Why
