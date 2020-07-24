@@ -1,8 +1,7 @@
 FROM ubuntu:latest
 
 # Install nightlies ppa and build-deps
-RUN
-    apt-get update                                                        && \
+RUN apt-get update                                                        && \
     apt-get install -y --no-install-recommends software-properties-common && \
     add-apt-repository -s ppa:team-xbmc/xbmc-nightly                      && \
     apt-get update                                                        && \
