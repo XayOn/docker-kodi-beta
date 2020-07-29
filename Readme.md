@@ -5,7 +5,7 @@
 <span style="display:block;text-align:center">![](https://github.com/XayOn/docker-kodi-beta/workflows/Publish%20to%20Docker/badge.svg) ![](https://img.shields.io/docker/pulls/xayon/docker-kodi-beta)</span>
 
 
-Use Kodi matrix without any sweat. :sweat_drops: Made with :heartpulse: by David Francos.
+Use Kodi matrix without any sweat. Made with :heartpulse: by David Francos.
 Dockerized kodi master branch, fresh and nice!
 
 > :warning: **This is the UNSTABLE version of KODI**
