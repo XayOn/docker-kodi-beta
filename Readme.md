@@ -34,7 +34,7 @@ Then, launch **xayon/docker-kodi-beta** with x11docker, the full extent of x11do
 For Xorg, with pulseaudio, you could launch it with the following command:
 
 ```bash
-x11docker --xorg --pulseaudio --gpu --homedir $HOME/.kodi_matrix/ kodi_matrix
+x11docker --xorg --pulseaudio --gpu --homedir $HOME/.kodi_matrix/ xayon/docker-kodi-beta
 ```
 
 
