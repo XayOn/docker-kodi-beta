@@ -21,24 +21,24 @@ RUN git clone -b master https://github.com/xbmc/xbmc /usr/src/kodi              
     make -j$(getconf _NPROCESSORS_ONLN) -C tools/depends/target/binary-addons PREFIX=/usr/local                 && \
     git clone https://github.com/xbmc/platform.git /usr/src/platform                                            && \
     cd /usr/src/platform/                                                                                       && \
-    cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -j$(getconf _NPROCESSORS_ONLN)                                    && \
-    make && make install                                                                                        && \ 
+    cmake . -DCMAKE_INSTALL_PREFIX=/usr/local                                                                   && \
+    make -j$(getconf _NPROCESSORS_ONLN) && make install                                                         && \ 
     git clone https://github.com/xbmc/kodi-platform.git /usr/src/kodi-platform                                  && \
     cd /usr/src/kodi-platform/                                                                                  && \
-    cmake . -DCMAKE_INSTALL_PREFIX=/usr/local  -j$(getconf _NPROCESSORS_ONLN)                                   && \
-    make && make install                                                                                        && \
+    cmake . -DCMAKE_INSTALL_PREFIX=/usr/local                                                                   && \
+    make -j$(getconf _NPROCESSORS_ONLN)  && make install                                                        && \
     git clone -b Matrix https://github.com/kodi-game/game.libretro /usr/src/game.libretro                       && \
     cd /usr/src/game.libretro/                                                                                  && \
-    cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -j$(getconf _NPROCESSORS_ONLN)                                 && \
-    make && make install                                                                                        && \
+    cmake . -DCMAKE_INSTALL_PREFIX=/usr/local                                                                   && \
+    make -j$(getconf _NPROCESSORS_ONLN) && make install                                                         && \
     git clone -b master https://github.com/kodi-game/game.libretro.snes9x /usr/src/game.libretro.snes9x         && \
     cd /usr/src/game.libretro.snes9x/                                                                           && \
-    cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -j$(getconf _NPROCESSORS_ONLN)                                 && \
-    make && make install                                                                                        && \
+    cmake . -DCMAKE_INSTALL_PREFIX=/usr/local                                                                   && \
+    make -j$(getconf _NPROCESSORS_ONLN) && make install                                                         && \
     git clone -b master https://github.com/kodi-game/game.libretro.beetle-psx /usr/src/game.libretro.beetle-psx && \
     cd /usr/src/game.libretro.beetle-psx/                                                                       && \
-    cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -j$(getconf _NPROCESSORS_ONLN)                                 && \
-    make && make install                                                                                        && \
+    cmake . -DCMAKE_INSTALL_PREFIX=/usr/local                                                                   && \
+    make -j$(getconf _NPROCESSORS_ONLN) && make install                                                         && \
     rm -rf /usr/src/*
 
 # TODO: Currently not working
