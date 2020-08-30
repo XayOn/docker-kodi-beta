@@ -12,4 +12,18 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         cache: true
+        tags: latest,x11
 
+  build_gbm:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Publish Kodi to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: xayon/docker-kodi-beta
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        cache: true
+        dockerfile: Dockerfile.gbm
+        tags: gbm
