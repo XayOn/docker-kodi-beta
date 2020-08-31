@@ -7,7 +7,7 @@ RUN apt-get update                                                              
     apt-get install -y --no-install-recommends software-properties-common                                       && \
     add-apt-repository -s ppa:team-xbmc/xbmc-nightly                                                            && \
     apt-get update                                                                                              && \
-    apt-get install -y --no-install-recommends git retroarch libretro-* default-jdk tzdata ca-certificates      && \
+    apt-get install -y --no-install-recommends kodi-eventclients-kodi-send git retroarch libretro-* default-jdk tzdata ca-certificates      && \
     apt-get build-dep -y kodi                                                                                   && \
     apt-get -y purge software-properties-common                                                                 && \
     rm -rf /var/lib/apt/lists

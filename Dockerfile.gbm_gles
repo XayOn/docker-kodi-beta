@@ -7,7 +7,7 @@ RUN apt-get update                                                              
     echo "\ndeb http://security.ubuntu.com/ubuntu bionic-security main universe multiverse restricted\n" >> /etc/apt/sources.list      && \
     cat /etc/apt/sources.list && \
     apt-get update                                                                                                                        && \
-    apt-get install -y --no-install-recommends git linux-headers-$(uname -r) retroarch libretro-* default-jdk tzdata ca-certificates      && \
+    apt-get install -y --no-install-recommends git linux-headers-$(uname -r) kodi-eventclients-kodi-send retroarch libretro-* default-jdk tzdata ca-certificates      && \
     apt-get build-dep -y kodi                                                                                                             && \
     apt-get -y purge software-properties-common                                                                                           && \
     rm -rf /var/lib/apt/lists
