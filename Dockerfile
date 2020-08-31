@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+RUN uname -a
+
 # Install nightlies ppa and build-deps
 RUN apt-get update                                                                                              && \
     apt-get install -y --no-install-recommends software-properties-common                                       && \
