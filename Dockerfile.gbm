@@ -10,6 +10,8 @@ RUN apt-get update                                                              
     apt-get -y purge software-properties-common                                                                 && \
     rm -rf /var/lib/apt/lists
 
+RUN uname -a
+
 # This takes fewer steps, but is able to remove most of the produced image size (/usr/src)
 # RUN git clone -b master https://github.com/xbmc/xbmc /usr/src/kodi                                              && \
 #     mkdir /usr/src/kodi-build                                                                                   && \
