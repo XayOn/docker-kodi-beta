@@ -18,6 +18,8 @@ Dockerized kodi master branch, fresh and nice!
 - Up to date bleeding edge kodi Docker image
 - Complete set of KODI binary addons (pvr, visual representations)
 - Libretro binary addons with multiple emulators (psx, snes...)
+- Compatible with most matrix compatible addons (cryptodome etc installed)
+- Less than XMB image
 
 # Installation
 
