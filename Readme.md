@@ -23,19 +23,52 @@ Dockerized kodi master branch, fresh and nice!
 
 **This image will work on any x64 system where you can run docker**.
 
+## X11Docker
+
 For simplicity, *x11docker* is recommended, wich will limit your options to any
 system with linux and bash.
 
 > :warning: ** ARM is not supported **
 
 First install **x11docker** following its installation [guide][3].
-Then, launch **xayon/docker-kodi-beta** with x11docker, the full extent of x11docker options is not to be part of this guide, you can refer to its documentation if you need advanced options.
+Then, launch **xayon/docker-kodi-beta** with x11docker, the full extent of
+x11docker options is not to be part of this guide, you can refer to its
+documentation if you need advanced options.
 
 For Xorg, with pulseaudio, you could launch it with the following command:
 
 ```bash
 x11docker --xorg --pulseaudio --gpu --homedir $HOME/.kodi_matrix/ xayon/docker-kodi-beta
 ```
+
+## Direct display (no Xorg) with GBM
+
+If you don't want Xorg, and can have your system without Xorg running, you can
+use a GBM enabled kodi version.
+
+It's available with the tag "gbm" under this same repository, you can execute
+it directly with docker, as in:
+
+```bash
+docker run -P8080:8080 --restart=always --privileged xayon/docker-kodi-beta:gbm
+```
+
+Or with docker-compose, with for example:
+
+```bash
+  kodi:
+     restart: always
+     image: xayon/docker-kodi-beta:gbm 
+     privileged: True
+     ports:
+      - 8080:8080
+```
+
+I'm exposing port 8080 because I use the web interface, but that's up to you.
+
+```bash
+docker run -P8080:8080 --restart=always --privileged xayon/docker-kodi-beta:gbm
+ ```
 
 
 ## Why

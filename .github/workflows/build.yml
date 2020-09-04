@@ -21,12 +21,15 @@ jobs:
     - name: Publish Kodi to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
+        env:
+          FLAGS: -DCORE_PLATFORM_NAME=gbm -DGBM_RENDER_SYSTEM=gl     
         name: xayon/docker-kodi-beta
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         cache: true
         dockerfile: Dockerfile.gbm
         tags: gbm
+        buildargs: FLAGS
 
   build_gbm_gles:
     runs-on: ubuntu-latest
@@ -35,6 +38,8 @@ jobs:
     - name: Publish Kodi to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
+        env:
+          FLAGS: -DCORE_PLATFORM_NAME=gbm -DGBM_RENDER_SYSTEM=gles     
         name: xayon/docker-kodi-beta
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
