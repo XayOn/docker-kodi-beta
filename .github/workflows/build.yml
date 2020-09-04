@@ -22,7 +22,7 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         env:
-          FLAGS: -DCORE_PLATFORM_NAME=gbm -DGBM_RENDER_SYSTEM=gl     
+          FLAGS: "-DCORE_PLATFORM_NAME=gbm -DGBM_RENDER_SYSTEM=gl"
         name: xayon/docker-kodi-beta
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
@@ -39,7 +39,7 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         env:
-          FLAGS: -DCORE_PLATFORM_NAME=gbm -DGBM_RENDER_SYSTEM=gles     
+          FLAGS: "-DCORE_PLATFORM_NAME=gbm -DGBM_RENDER_SYSTEM=gles"
         name: xayon/docker-kodi-beta
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
