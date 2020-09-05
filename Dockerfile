@@ -40,7 +40,7 @@ RUN apt-get update                                                              
     cmake . -DCMAKE_INSTALL_PREFIX=/usr/local                                                                                         && \
     make -j$(getconf _NPROCESSORS_ONLN) && make install                                                                               && \
     rm -rf /usr/src/*                                                                                                                 && \
-    apt-get remove --purge -y libstdc++-9-dev:amd64 libstdc++-10-dev:amd64 libgcc-10-dev:amd64 libgphobos-10-dev:amd64 libgcc-9-dev:amd64 gcc-9 gdc-10 gcc-10 g++-9 g++-10 cpp-9 cpp-10 default-jdk autoconf automake autopoint cmake default-jre gawk gcc gcc-4.9 g++ g++-4.9 cpp ninja-build waylandpp-dev && \
+    apt-get remove --purge -y libstdc++-9-dev:amd64 libstdc++-10-dev:amd64 libgcc-10-dev:amd64 libgphobos-10-dev:amd64 libgcc-9-dev:amd64 gcc-9 gdc-10 gcc-10 cpp-9 cpp-10 default-jdk autoconf automake autopoint cmake default-jre gawk gcc g++ cpp ninja-build waylandpp-dev && \
     apt-get -y --purge autoremove                                                                                                     && \
     rm /usr/lib/*/*.a
 
