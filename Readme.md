@@ -10,7 +10,7 @@ Dockerized kodi master branch, fresh and nice!
 
 > :warning: **This is the UNSTABLE version of KODI**
 
-:computer: This repository contains a single Dockerfile implementing the [oficially recommended way][5] of KODI build on linux. It comes with Github Actions integration for automatic builds, for the current git on the KODI repository reference linked in this readme (Currently [25af3208][4]).
+:computer: This repository contains a single Dockerfile implementing the [oficially recommended way][5] of KODI build on linux. It comes with Github Actions integration for automatic builds, for the current git on the KODI repository reference linked in this readme (Currently [4b92fa338][4]).
 
 
 # What will you get
@@ -19,7 +19,7 @@ Dockerized kodi master branch, fresh and nice!
 - Complete set of KODI binary addons (pvr, visual representations)
 - Libretro binary addons with multiple emulators (psx, snes...)
 - Compatible with most matrix compatible addons (cryptodome etc installed)
-- Less than XMB image
+- 500MB image
 
 # Installation
 
@@ -64,9 +64,13 @@ Or with docker-compose, with for example:
      privileged: True
      ports:
       - 8080:8080
+     volumes:
+      - /dev/bus/usb:/dev/bus/usb
 ```
 
 I'm exposing port 8080 because I use the web interface, but that's up to you.
+Also, this mounts /dev/bus/usb as volume so you can use your keyboard and
+peripherals.
 
 ```bash
 docker run -P8080:8080 --restart=always --privileged xayon/docker-kodi-beta:gbm
@@ -100,5 +104,5 @@ I have successfully tested this build with:
 [1]: https://github.com/SicLuceatLux/docker-kodi
 [2]: https://github.com/mviereck/x11docker
 [3]: https://github.com/mviereck/x11docker#shortest-way-for-first-installation "guide"
-[4]: https://github.com/xbmc/xbmc/commit/25af32080990fda575d9d2ef7c7d8042b5730e25 "25af3208"
+[4]: https://github.com/xbmc/xbmc/commit/4b92fa338cd4536d3c4836f835ca66a2888724c3 "4b92fa338"
 [5]: https://github.com/xbmc/xbmc/blob/master/docs/README.Linux.md "oficially recommended way"
