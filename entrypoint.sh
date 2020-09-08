@@ -7,6 +7,8 @@ stop_or_kill() {
 
 init() {
   command="${KODI_CMD:-kodi-standalone}"
+  gbm_opts="${KODI_GBM_OPTS:-auto}"
+  sh /gbm-set-color-range.sh $gbm_opts
   trap stop_or_kill EXIT
   $command
 }
