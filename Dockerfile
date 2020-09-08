@@ -5,6 +5,7 @@ ARG FLAGS=-DX11_RENDER_SYSTEM=gl
 
 RUN apt-get update                                                                                                                    && \
     apt-get install -y --no-install-recommends python-pycryptodome git software-properties-common default-jdk tzdata ca-certificates  && \
+    apt-get install -y --no-install-recommends intel-media-va-driver-non-free mesa-va-drivers                                         && \
     add-apt-repository -s ppa:team-xbmc/xbmc-nightly                                                                                  && \
     apt-get update                                                                                                                    && \
     apt-get install -y --no-install-recommends libnss3 kodi-eventclients-kodi-send retroarch libretro-*                               && \
