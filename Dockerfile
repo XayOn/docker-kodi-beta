@@ -23,9 +23,9 @@ RUN apt-get update                                                              
     git clone -b master https://github.com/kodi-game/game.libretro.beetle-psx /usr/src/game.libretro.beetle-psx                       && \
     mkdir /usr/src/kodi-build                                                                                                         && \
     mkdir /usr/src/drm-build                                                                                                          && \
-    cd /usr/src/drm-build                                                                                                             && \
+    cd /usr/src/drm                                                                                                                   && \
     meson /usr/src/drm-build                                                                                                          && \ 
-    ninja -c /usr/src/drm-build all                                                                                                   && \
+    ninja -C /usr/src/drm-build all                                                                                                   && \
     cp /usr/src/drm-build/tests/modetest/modetest /usr/local/bin/                                                                     && \
     cd /usr/src/kodi-build                                                                                                            && \
     cmake /usr/src/kodi -DCMAKE_INSTALL_PREFIX=/usr/local $FLAGS                                                                      && \
