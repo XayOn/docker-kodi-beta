@@ -6,7 +6,7 @@ ENV KODI_CMD=kodi-standalone
 ENV KODI_GBM_OPTS=auto
 
 RUN apt-get update                                                                                                                    && \
-    apt-get install -y --no-install-recommends python-pycryptodome git software-properties-common default-jdk tzdata ca-certificates  && \
+    apt-get install -y --no-install-recommends python3-pycryptodome git software-properties-common default-jdk tzdata ca-certificates && \
     apt-get install -y --no-install-recommends intel-media-va-driver-non-free mesa-va-drivers meson libpciaccess-dev                  && \
     add-apt-repository -s ppa:team-xbmc/xbmc-nightly                                                                                  && \
     apt-get update                                                                                                                    && \
