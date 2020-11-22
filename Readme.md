@@ -10,7 +10,7 @@ Dockerized kodi master branch, fresh and nice!
 
 > :warning: **This is the UNSTABLE version of KODI**
 
-:computer: This repository contains a single Dockerfile implementing the [oficially recommended way][5] of KODI build on linux. It comes with Github Actions integration for automatic builds, for the current git on the KODI repository reference linked in this readme (Currently [4b92fa338][4]).
+:computer: This repository contains a single Dockerfile implementing the [oficially recommended way][5] of KODI build on linux. It comes with Github Actions integration for automatic builds, for the current git on the KODI repository reference linked in this readme (Currently [3f78d7e][4]).
 
 
 # What will you get
@@ -104,5 +104,5 @@ I have successfully tested this build with:
 [1]: https://github.com/SicLuceatLux/docker-kodi
 [2]: https://github.com/mviereck/x11docker
 [3]: https://github.com/mviereck/x11docker#shortest-way-for-first-installation "guide"
-[4]: https://github.com/xbmc/xbmc/commit/4b92fa338cd4536d3c4836f835ca66a2888724c3 "4b92fa338"
+[4]: https://github.com/xbmc/xbmc/commit/3f78d7e27055d337d28e2f8354f750d222952246 "3f78d7e"
 [5]: https://github.com/xbmc/xbmc/blob/master/docs/README.Linux.md "oficially recommended way"
