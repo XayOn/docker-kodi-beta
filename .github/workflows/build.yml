@@ -21,7 +21,7 @@ jobs:
     - name: Publish Kodi to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       env:
-        FLAGS: "-DCORE_PLATFORM_NAME=gbm -DGBM_RENDER_SYSTEM=gl"
+        FLAGS: "-DCORE_PLATFORM_NAME=gbm -DAPP_RENDER_SYSTEM=gl"
       with:
         name: xayon/docker-kodi-beta
         username: ${{ secrets.DOCKER_USERNAME }}
@@ -37,7 +37,7 @@ jobs:
     - name: Publish Kodi to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       env:
-        FLAGS: "-DCORE_PLATFORM_NAME=gbm -DGBM_RENDER_SYSTEM=gles"
+        FLAGS: "-DCORE_PLATFORM_NAME=gbm -DAPP_RENDER_SYSTEM=gles"
       with:
         name: xayon/docker-kodi-beta
         username: ${{ secrets.DOCKER_USERNAME }}
