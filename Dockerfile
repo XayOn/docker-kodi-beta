@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG FLAGS=-DAPP_RENDER_SYSTEM=gl                                
+ARG FLAGS=-DAPP_RENDER_SYSTEM=gl
 ENV KODI_CMD=kodi-standalone
 ENV KODI_GBM_OPTS=auto
 
@@ -24,7 +24,7 @@ RUN apt-get update                                                              
     mkdir /usr/src/kodi-build                                                                                                         && \
     mkdir /usr/src/drm-build                                                                                                          && \
     cd /usr/src/drm                                                                                                                   && \
-    meson /usr/src/drm-build                                                                                                          && \ 
+    meson /usr/src/drm-build                                                                                                          && \
     ninja -C /usr/src/drm-build all                                                                                                   && \
     cp /usr/src/drm-build/tests/modetest/modetest /usr/local/bin/                                                                     && \
     cd /usr/src/kodi-build                                                                                                            && \
@@ -35,7 +35,7 @@ RUN apt-get update                                                              
     make -j$(getconf _NPROCESSORS_ONLN) -C tools/depends/target/binary-addons PREFIX=/usr/local                                       && \
     cd /usr/src/platform/                                                                                                             && \
     cmake . -DCMAKE_INSTALL_PREFIX=/usr/local                                                                                         && \
-    make -j$(getconf _NPROCESSORS_ONLN) && make install                                                                               && \ 
+    make -j$(getconf _NPROCESSORS_ONLN) && make install                                                                               && \
     cd /usr/src/kodi-platform/                                                                                                        && \
     cmake . -DCMAKE_INSTALL_PREFIX=/usr/local                                                                                         && \
     make -j$(getconf _NPROCESSORS_ONLN)  && make install                                                                              && \
