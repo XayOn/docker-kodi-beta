@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG FLAGS=-DX11_RENDER_SYSTEM=gl                                
+ARG FLAGS=-DAPP_RENDER_SYSTEM=gl                                
 ENV KODI_CMD=kodi-standalone
 ENV KODI_GBM_OPTS=auto
 
