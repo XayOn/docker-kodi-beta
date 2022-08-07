@@ -11,6 +11,7 @@ RUN apt-get update                                                              
     add-apt-repository -s ppa:team-xbmc/xbmc-nightly                                                                                  && \
     apt-get update                                                                                                                    && \
     apt-get install -y --no-install-recommends libnss3 kodi-eventclients-kodi-send retroarch libretro-*                               && \
+    apt-get install -y --no-install-recommends libgbm-dev libinput-dev libxkbcommon-dev && \
     apt-get build-dep -y kodi                                                                                                         && \
     apt-get -y purge software-properties-common                                                                                       && \
     rm -rf /var/lib/apt/lists/*                                                                                                       && \
@@ -18,7 +19,7 @@ RUN apt-get update                                                              
     git clone git://anongit.freedesktop.org/mesa/drm /usr/src/drm                                                                     && \
     git clone https://github.com/xbmc/platform.git /usr/src/platform                                                                  && \
     git clone https://github.com/xbmc/kodi-platform.git /usr/src/kodi-platform                                                        && \
-    git clone -b Matrix https://github.com/kodi-game/game.libretro /usr/src/game.libretro                                             && \
+    git clone -b Nexus https://github.com/kodi-game/game.libretro /usr/src/game.libretro                                             && \
     git clone -b master https://github.com/kodi-game/game.libretro.snes9x /usr/src/game.libretro.snes9x                               && \
     git clone -b master https://github.com/kodi-game/game.libretro.beetle-psx /usr/src/game.libretro.beetle-psx                       && \
     mkdir /usr/src/kodi-build                                                                                                         && \
